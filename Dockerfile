@@ -14,7 +14,7 @@ RUN \
 RUN \
     mkdir -p /config/.config/baidunetdisk && \
     ln -fs /data /config/.config/baidunetdisk && \
-    curl -4Lo baidunetdisk.deb https://pkg-ant.baidu.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_amd64.deb && \
+    curl -4Lo baidunetdisk.deb http://wppkg.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_amd64.deb && \
     dpkg -x baidunetdisk.deb / && \
     rm -rf baidunetdisk.deb && \
     echo "/opt/baidunetdisk/baidunetdisk --no-sandbox" > /defaults/autostart
