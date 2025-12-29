@@ -1,0 +1,9 @@
+[Unit]
+Description=Baidu Netdisk socket proxy
+Requires=baidu-netdisk.service
+After=baidu-netdisk.service
+PartOf=baidu-netdisk.service
+
+[Service]
+ExecStart=/usr/lib/systemd/systemd-socket-proxyd --exit-idle-time=12h 127.0.0.1:45485
+KillMode=process

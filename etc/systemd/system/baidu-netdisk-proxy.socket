@@ -1,0 +1,10 @@
+[Unit]
+Description=Baidu Netdisk on-demand socket
+
+[Socket]
+ListenStream=127.0.0.1:45484
+NoDelay=true
+Service=baidu-netdisk-proxy.service
+
+[Install]
+WantedBy=sockets.target

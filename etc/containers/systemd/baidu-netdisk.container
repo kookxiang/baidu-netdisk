@@ -1,0 +1,15 @@
+[Unit]
+Requires=network-online.target
+
+[Container]
+ContainerName=baidu-netdisk
+PublishPort=127.0.0.1:45485:14500
+Image=ghcr.io/kookxiang/baidu-netdisk:latest
+Volume=/mnt/downloads:/data
+Volume=baidu-netdisk.volume:/root/.config/baidunetdisk
+Timezone=Asia/Shanghai
+PodmanArgs=--memory 8g --cpus 4
+
+[Service]
+Restart=no
+TimeoutStopSec=3600
