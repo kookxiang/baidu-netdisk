@@ -5,7 +5,7 @@
   <menu id="root-menu" label="Openbox 3">
     <item label="百度网盘">
       <action name="Execute">
-        <command>/opt/baidunetdisk/baidunetdisk --no-sandbox</command>
+        <command>/opt/baidunetdisk/baidunetdisk --no-sandbox --disable-gpu --disable-gpu-compositing --disable-dev-shm-usage --disable-features=UseOzonePlatform,VizDisplayCompositor --ozone-platform=x11</command>
       </action>
     </item>
     <item label="Helium">
