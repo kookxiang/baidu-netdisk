@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv bash
+
+set -e
+
+mkdir -p /config/log
+
+export ELECTRON_DISABLE_GPU=1
+export ELECTRON_DISABLE_SANDBOX=1
+export QT_QPA_PLATFORM=xcb
+export QT_X11_NO_MITSHM=1
+
+exec /opt/baidunetdisk/baidunetdisk \
+  --no-sandbox \
+  --disable-gpu \
+  --disable-gpu-compositing \
+  --disable-dev-shm-usage \
+  --ozone-platform=x11 \
+  "$@" >>/config/log/baidunetdisk.log 2>&1

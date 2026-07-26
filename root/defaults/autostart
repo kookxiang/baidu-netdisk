@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
-/opt/baidunetdisk/baidunetdisk --no-sandbox --disable-gpu --disable-gpu-compositing --disable-dev-shm-usage --disable-features=UseOzonePlatform,VizDisplayCompositor --ozone-platform=x11 &
+start-baidu-netdisk &
 /usr/local/helium/chrome --no-sandbox --disable-dev-shm-usage --disable-quic --user-data-dir=/config/helium &

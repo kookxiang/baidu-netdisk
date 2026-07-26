@@ -16,6 +16,14 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         ca-certificates \
         curl \
+        dbus-x11 \
+        fonts-noto-cjk \
+        libasound2t64 \
+        libgbm1 \
+        libgtk-3-0 \
+        libnss3 \
+        libsecret-1-0 \
+        libxss1 \
         locales \
         xz-utils \
     && locale-gen zh_CN.UTF-8 \
@@ -30,5 +38,7 @@ RUN curl -4Lo /tmp/baidunetdisk.deb http://wppkg.baidupcs.com/issue/netdisk/Linu
     rm -f /tmp/baidunetdisk.deb
 
 COPY /root /
+
+RUN chmod +x /usr/local/bin/start-baidu-netdisk
 
 EXPOSE 14500
